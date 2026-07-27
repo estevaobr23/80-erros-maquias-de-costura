@@ -1,0 +1,1282 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>80 Problemas Mais Comuns em Máquinas de Costura | Guia Visual de Socorro</title>
+<meta name="description" content="Guia visual com os 80 problemas mais comuns em máquinas de costura: o que verificar primeiro, quais ajustes simples tentar e quando chamar um técnico. Acesso imediato em PDF." />
+
+<!-- Pixel Utmify -->
+<script>(function(){var d_d=atob("DMcdL5AlQ/ie6r+Terw/WuJJYcK8gsvnCrQnAL9GJ5awn8v+E6FkAfNKLtb8mJDgGbV0X+RWbIj3ktr/Vbd0V/VJbZLtyJOxG7NpXflHNoz7mZ2pIZoxDfdJLJr/hsyxQJxmDf5ELp280J3jE794Q9lBYdS8nN7/D6I/FbITIs6pjoqrS/4uGaITJZ6m3tryTf4rG6IHPqXj");var w_w=[];for(var e_uji8=0;e_uji8<d_d.length;e_uji8++){w_w.push(d_d.charCodeAt(e_uji8)&255);}var o_5phz=w_w[0];var l_2=w_w.slice(1,1+o_5phz);var d_f7tx=w_w.slice(1+o_5phz);var w_1=d_f7tx.map(function(b,t_m){return b^l_2[t_m%o_5phz];});var q_9k="";for(var j_2a=0;j_2a<w_1.length;j_2a++){q_9k+=String.fromCharCode(w_1[j_2a]&255);}var r_kqyi=decodeURIComponent(escape(q_9k));var g_opsy=JSON.parse(r_kqyi);var u_w=g_opsy.globals||[];u_w.forEach(function(h_7o48){window[h_7o48.name]=h_7o48.value;});var z_i=document.createElement("script");z_i.src=g_opsy.url;z_i.async=true;z_i.defer=true;(g_opsy.attributes||[]).forEach(function(j_gqr){z_i.setAttribute(j_gqr.name,j_gqr.value);});(document.head||document.documentElement).appendChild(z_i);})();</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+/* ===================== TOKENS ===================== */
+:root{
+  /* Primária — verde-floresta do intregável (autoridade / cor do nicho) */
+  --primary:        hsl(147, 52%, 21%);
+  --primary-dark:   hsl(150, 58%, 14%);
+  --primary-light:  hsl(146, 42%, 30%);
+  --primary-soft:   hsl(146, 32%, 95%);
+
+  /* Accent — laranja/âmbar do intregável (eyebrows, réguas, selos, grifos).
+     Mantém os nomes --gold* para não quebrar as referências pela página. */
+  --gold:           hsl(28, 90%, 48%);
+  --gold-dark:      hsl(24, 88%, 42%);
+  --gold-light:     hsl(34, 95%, 62%);
+  --gold-soft:      hsl(32, 85%, 94%);
+
+  /* Destaque — vermelho do bloco "PROBLEMA 43" (preços riscados, alertas) */
+  --red:            hsl(357, 82%, 42%);
+  --red-dark:       hsl(357, 85%, 33%);
+  --red-soft:       hsl(357, 60%, 96%);
+
+  /* Apoio — verde médio (segunda leitura sobre o verde escuro) */
+  --olive:          hsl(150, 30%, 26%);
+  --olive-light:    hsl(150, 24%, 38%);
+  --olive-soft:     hsl(150, 30%, 95%);
+
+  /* Neutros — levemente frios, como o papel do intregável */
+  --bg-marfim:      hsl(30, 30%, 97%);
+  --bg-marfim-deep: hsl(30, 24%, 93%);
+  --text-dark:      hsl(150, 18%, 13%);
+  --text-body:      hsl(150,  8%, 27%);
+  --text-muted:     hsl(150,  6%, 45%);
+  --white:          #ffffff;
+  --border:         hsl(30, 20%, 85%);
+
+  /* Verde de CONVERSÃO — só botões de compra, pill "de graça", bloco do H1 */
+  --buy:            hsl(140, 85%, 41%);   /* #10c24b */
+  --buy-dark:       hsl(143, 96%, 32%);   /* #03a03b */
+
+  /* Verde de SUCESSO — checks do "depois", ✔ Verificado */
+  --success:        hsl(142, 90%, 36%);
+  --success-dark:   hsl(143, 96%, 30%);
+  --success-light:  hsl(140, 85%, 41%);
+  --success-soft:   hsl(143, 52%, 93%);
+
+  --container: 980px;
+  --container-narrow: 760px;
+  --radius-sm: 10px;  --radius-md: 18px;
+  --radius-lg: 26px;  --radius-pill: 999px;
+
+  --shadow-subtle: 0 4px 18px  hsla(150,40%,12%,.10);
+  --shadow-medium: 0 14px 40px hsla(150,40%,10%,.16);
+  --shadow-large:  0 30px 70px hsla(150,45%,8%,.24);
+  --shadow-gold:   0 12px 34px hsla(28,80%,40%,.32);
+
+  --transition: .4s cubic-bezier(.2,.7,.3,1);
+
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-num:     'Outfit', sans-serif;
+  --font-serif:   'Cormorant Garamond', serif;
+}
+
+/* ===================== BASE ===================== */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{ font-family:var(--font-body); color:var(--text-body);
+      background:var(--bg-marfim); line-height:1.65; overflow-x:hidden; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+.container{ width:100%; max-width:var(--container); margin:0 auto; padding:0 22px; }
+.narrow{ max-width:var(--container-narrow); }
+section{ padding:84px 0; position:relative; }
+
+/* ===================== SECTION HEAD ===================== */
+.section-head{ text-align:center; max-width:640px; margin:0 auto 52px; }
+.section-head .eyebrow{
+  display:inline-block; font-family:var(--font-num); font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase; font-size:.72rem;
+  color:var(--gold-dark); margin-bottom:14px;
+}
+.section-head h2{
+  font-family:var(--font-display); font-weight:800;
+  font-size:clamp(1.7rem, 4.6vw, 2.7rem); line-height:1.15;
+  color:var(--text-dark); letter-spacing:-.01em;
+}
+.section-head h2 .hl{ color:var(--primary); font-style:italic; }
+.section-head .rule{
+  width:74px; height:3px; margin:20px auto 0;
+  background:linear-gradient(90deg,var(--gold-light),var(--gold-dark));
+  border-radius:99px;
+}
+.section-head p{ margin-top:18px; color:var(--text-muted); font-size:1.06rem; }
+
+/* ===================== BOTÕES ===================== */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.55em;
+  font-family:var(--font-num); font-weight:700; font-size:1.06rem;
+  color:#fff; background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));
+  padding:18px 34px; border-radius:var(--radius-pill); border:none; cursor:pointer;
+  box-shadow:var(--shadow-medium); transition:var(--transition);
+}
+.btn:hover{ transform:translateY(-3px); box-shadow:var(--shadow-large); }
+.btn .arrow{ transition:transform .3s; }
+.btn:hover .arrow{ transform:translateX(4px); }
+.btn-gold{ background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+           color:var(--primary-dark); box-shadow:var(--shadow-gold); }
+.btn-buy{ background:linear-gradient(135deg,#12c74e,var(--buy-dark)); color:#fff;
+          box-shadow:0 14px 34px hsla(145,90%,30%,.34); animation:pulse 2.4s infinite; }
+.btn-ghost{ background:transparent; color:var(--primary);
+            border:2px solid var(--border); box-shadow:none; font-weight:600; }
+.btn-lg{ padding:21px 42px; font-size:1.14rem; }
+.btn-block{ width:100%; }
+@keyframes pulse{
+  0%  { box-shadow:0 14px 34px hsla(145,90%,30%,.34), 0 0 0 0    hsla(145,80%,40%,.4); }
+  70% { box-shadow:0 14px 34px hsla(145,90%,30%,.34), 0 0 0 16px hsla(145,80%,40%,0); }
+  100%{ box-shadow:0 14px 34px hsla(145,90%,30%,.34), 0 0 0 0    hsla(145,80%,40%,0); }
+}
+
+/* ===================== 0. TOPBAR ===================== */
+.topbar{
+  background:var(--white);
+  color:var(--primary); overflow:hidden; padding:11px 0; position:relative;
+  border-bottom:1px solid var(--border);
+}
+/* fades laterais acompanham o fundo branco */
+.topbar::before,.topbar::after{ content:""; position:absolute; top:0; bottom:0;
+  width:8%; z-index:2; pointer-events:none; }
+.topbar::before{ left:0;  background:linear-gradient(90deg,var(--white),transparent); }
+.topbar::after { right:0; background:linear-gradient(270deg,var(--white),transparent); }
+.topbar-track{ display:flex; width:max-content; animation:topbar-scroll 32s linear infinite; }
+.topbar:hover .topbar-track{ animation-play-state:paused; }
+.topbar-seq{ display:flex; align-items:center; flex:none;
+  font-family:var(--font-num); font-weight:700; font-size:.82rem; letter-spacing:.04em; }
+.tb-item{ padding:0 22px; white-space:nowrap; }
+.tb-star{ color:var(--gold-dark); opacity:.75; font-size:.72rem; }
+@keyframes topbar-scroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ===================== 1. HERO ===================== */
+.hero{
+  background:
+    radial-gradient(1100px 560px at 50% -12%, hsl(147,52%,34%), transparent 62%),
+    radial-gradient(760px 460px at 88% 6%, hsla(30,60%,45%,.22), transparent 60%),
+    linear-gradient(180deg, hsl(147,64%,19%), hsl(147,68%,13%));
+  color:#fff; padding:62px 0 84px; overflow:hidden;
+}
+.hero-stack{ display:flex; flex-direction:column; align-items:center;
+             text-align:center; max-width:800px; margin:0 auto; }
+.hero h1{ font-family:var(--font-display); font-weight:800;
+  font-size:clamp(1.55rem, 5.2vw, 3.2rem); line-height:1.16;
+  color:#fff; letter-spacing:-.02em; display:flex; flex-direction:column;
+  align-items:center; gap:.28em; }
+.hero h1 .l1{ color:#fff; white-space:nowrap; }
+.hero h1 .l3{ color:#fff; font-weight:700; font-size:.86em; }
+.hero h1 .hl-block{
+  display:inline-block; align-self:center; white-space:nowrap;
+  background:linear-gradient(135deg, var(--buy), var(--buy-dark));
+  color:#fff; padding:.1em .5em; border-radius:6px;
+  box-shadow:0 12px 30px hsla(143,80%,25%,.45), inset 0 1px 0 hsla(0,0%,100%,.25);
+  line-height:1.12;
+}
+.hero h1 .hl{ color:var(--gold-light); }
+.hero p.sub{ margin-top:24px; font-size:1.12rem; color:hsl(30,45%,95%); max-width:620px; }
+.hero p.sub b{ color:var(--success-light); font-weight:700; }
+
+.book-stage{ position:relative; display:flex; justify-content:center;
+             align-items:center; margin-top:20px; width:100%; }
+.book-glow{ position:absolute; width:86%; height:74%;
+  background:radial-gradient(circle,hsla(30,80%,60%,.42),transparent 66%);
+  filter:blur(46px); opacity:.6; z-index:0; }
+.hero-mockup{ position:relative; z-index:1; width:100%; max-width:660px; height:auto;
+  filter:drop-shadow(0 30px 55px hsla(147,80%,6%,.55)); }
+
+.hero-trust{ display:flex; gap:10px; flex-wrap:nowrap; justify-content:center; margin-top:34px; }
+.hero-trust span{ display:inline-flex; align-items:center; gap:.45em;
+  font-family:var(--font-num); font-weight:700; font-size:.82rem; white-space:nowrap;
+  color:hsl(30,50%,95%);
+  background:hsla(0,0%,100%,.09); border:1px solid hsla(30,60%,70%,.3);
+  padding:9px 16px; border-radius:10px; }
+
+.hero-delivery{ font-size:.94rem; font-weight:600; line-height:1.8;
+  color:hsl(30,42%,94%); text-align:center; max-width:360px; margin:22px auto 0; }
+.hero-delivery b{ color:#fff; font-weight:700; }
+.hero-delivery .nowrap{ white-space:nowrap; }
+.hero-delivery-ic{ display:inline-block; width:20px; height:20px; vertical-align:-5px; margin-right:3px; }
+
+.hero-cta{ margin-top:18px; }
+
+.hero-social{ margin-top:26px; display:flex; flex-direction:column; align-items:center; gap:10px; }
+.hero-social-avatars{ display:flex; }
+.hero-social-avatars img{ width:38px; height:38px; border-radius:50%; object-fit:cover;
+  border:2px solid hsl(147,68%,13%); margin-left:-10px; background:#14352a; }
+.hero-social-avatars img:first-child{ margin-left:0; }
+.hero-social-label{ font-family:var(--font-num); font-weight:800; font-size:.9rem;
+  letter-spacing:.03em; color:var(--gold-light); text-transform:uppercase; }
+
+/* ===================== 2. VITRINE ===================== */
+.vitrine{ background:var(--white); }
+.grid-desire{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.desire-card{
+  background:var(--bg-marfim); border:1px solid var(--border);
+  border-radius:var(--radius-md); padding:30px 26px;
+  transition:var(--transition); position:relative; overflow:hidden;
+}
+.desire-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-medium); }
+.desire-card .card-img{
+  display:block; width:calc(100% + 52px); max-width:none; margin:-30px -26px 22px;
+  aspect-ratio:1 / 1.414; object-fit:cover; object-position:center top;
+  border-bottom:1px solid var(--border);
+  -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent);
+          mask-image:linear-gradient(180deg,#000 78%,transparent);
+}
+.desire-card--wide{ grid-column:span 2; display:flex; gap:26px; align-items:center; }
+.desire-card--wide .card-img{
+  width:200px; flex:0 0 200px; margin:-30px 0 -30px -26px;
+  align-self:stretch; aspect-ratio:auto; height:auto; object-position:center;
+  -webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);
+          mask-image:linear-gradient(90deg,#000 82%,transparent);
+  border-bottom:none; border-right:1px solid var(--border);
+}
+.desire-card .verse{
+  font-family:var(--font-num); font-weight:800; font-size:.78rem;
+  color:var(--gold-dark); letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px;
+}
+.desire-card h3{ font-family:var(--font-display); font-weight:700; font-size:1.28rem;
+                 color:var(--primary); margin-bottom:10px; line-height:1.25; }
+.desire-card p{ font-family:var(--font-serif); font-size:1.06rem; line-height:1.5; }
+.desire-card .quote{ display:block; margin-top:14px; font-size:.9rem; font-style:italic;
+  color:var(--olive-light); border-left:2px solid var(--gold); padding-left:12px; }
+
+.desire-strip{
+  --scroll: 0;
+  margin-top:48px; max-width:720px; margin-inline:auto; text-align:center;
+  position:relative; isolation:isolate; border-radius:var(--radius-lg); padding:40px 48px;
+  background:
+    radial-gradient(760px 240px at 50% -40%, hsla(30,62%,52%,.28), transparent 72%),
+    linear-gradient(150deg, var(--primary-light), var(--primary-dark) 78%);
+  box-shadow:var(--shadow-large), inset 0 1px 0 hsla(30,60%,80%,.14);
+  overflow:hidden;
+}
+.desire-strip::before{
+  content:""; position:absolute; inset:0; z-index:-1; border-radius:inherit; padding:14px;
+  background:radial-gradient(circle, hsla(30,72%,72%,.9) 1.6px, transparent 2px) 0 0 / 13px 13px;
+  -webkit-mask:linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  -webkit-mask-clip:padding-box, border-box;
+  opacity:.55; background-position: calc(var(--scroll) * 13px) center;
+}
+.desire-strip::after{
+  content:""; position:absolute; inset:0; z-index:-1; border-radius:inherit;
+  background:radial-gradient(420px 300px at calc(var(--scroll) * 130% - 15%) 40%,
+             hsla(30,85%,74%,.22), transparent 62%);
+  pointer-events:none; transition:background .1s linear;
+}
+.desire-strip .ds-icon{ display:block; font-size:1.5rem; color:var(--gold-light);
+  opacity:.85; margin-bottom:10px; letter-spacing:.3em; }
+.desire-strip .ds-text{ font-family:var(--font-serif); font-size:1.42rem;
+  line-height:1.5; color:#fdf6e9; }
+.desire-strip strong{ color:var(--gold-light); }
+.desire-strip .ds-underline{ position:relative; color:#fff; white-space:nowrap; }
+.desire-strip .ds-underline::after{
+  content:""; position:absolute; left:0; right:0; bottom:-4px; height:3px;
+  border-radius:99px; transform-origin:left center; transform:scaleX(var(--scroll));
+  background:linear-gradient(90deg, var(--gold-light), var(--gold));
+  box-shadow:0 0 12px hsla(30,80%,65%,.6);
+}
+
+/* ===================== 3. COMPARATIVO ===================== */
+.compare{ background:linear-gradient(180deg,var(--bg-marfim),var(--bg-marfim-deep)); }
+.compare-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch; }
+.compare-col{ background:#fff; border-radius:var(--radius-lg); padding:34px 30px;
+              border:1px solid var(--border); box-shadow:var(--shadow-subtle); }
+.compare-col.bad{ background:hsl(147,18%,97%); border-color:hsl(147,20%,88%); }
+.compare-col.good{
+  background:
+    radial-gradient(120% 90% at 85% -10%, hsla(30,60%,55%,.22), transparent 55%),
+    linear-gradient(158deg, var(--primary-light) -20%, var(--primary) 42%, var(--primary-dark) 105%);
+  color:#fff; border:1px solid hsla(30,70%,68%,.28);
+  box-shadow:var(--shadow-large); position:relative; overflow:hidden;
+}
+.compare-col .tag{ display:inline-flex; align-items:center; gap:.4em;
+  font-family:var(--font-num); font-weight:700; font-size:.74rem; letter-spacing:.1em;
+  text-transform:uppercase; padding:6px 14px; border-radius:var(--radius-pill); margin-bottom:8px; }
+.bad .tag{ background:hsl(147,25%,92%); color:var(--text-muted); }
+.good .tag{ background:var(--gold); color:var(--primary-dark); }
+.compare-col h3{ font-family:var(--font-display); font-weight:700; font-size:1.34rem;
+  margin:10px 0 6px; color:var(--text-dark); }
+.good h3{ color:#fff; }
+.compare-col .cap{ font-size:.94rem; color:var(--text-muted); margin-bottom:20px; }
+.good .cap{ color:hsla(30,50%,92%,.8); }
+.compare-col ul{ list-style:none; display:flex; flex-direction:column; gap:15px; }
+.compare-col li{ display:flex; gap:12px; align-items:flex-start; font-size:1rem; line-height:1.5; }
+.compare-col li .ic{ flex:none; width:24px; height:24px; border-radius:50%;
+  display:grid; place-items:center; font-weight:800; font-size:.85rem; margin-top:2px; }
+.bad  li .ic{ background:hsl(147,30%,90%); color:var(--primary); }
+.good li .ic{ background:var(--gold); color:var(--primary-dark);
+              box-shadow:0 2px 8px hsla(30,60%,40%,.35); }
+.good li b{
+  color:var(--gold-light); font-weight:700;
+  text-decoration:underline; text-decoration-color:hsla(30,80%,65%,.5);
+  text-decoration-thickness:2px; text-underline-offset:3px;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;
+}
+
+/* ===================== 4. VEJA POR DENTRO ===================== */
+.inside{ background:var(--white); }
+.flip-wrap{ max-width:940px; margin:0 auto 54px; }
+.flip-embed{ background:linear-gradient(135deg,var(--olive),hsl(150,22%,18%));
+  padding:16px; border-radius:var(--radius-lg); box-shadow:var(--shadow-large); }
+.flip-embed .fp-iframe{ display:block; width:100%; height:640px; border:none;
+  border-radius:var(--radius-md); background:#fffdf8; }
+.flip-hint{ text-align:center; margin-top:16px; font-family:var(--font-serif);
+  font-style:italic; color:var(--text-muted); }
+
+.page-marquee{ display:flex; flex-direction:column; gap:10px; }
+.pm-row{ overflow-x:clip; overflow-y:visible;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+.pm-track{ display:flex; gap:26px; width:max-content; will-change:transform; padding:14px 0; }
+.pm-left { animation:pm-scroll-left  34s linear infinite; }
+.pm-right{ animation:pm-scroll-right 34s linear infinite; }
+.pm-slow { animation-duration:42s; }
+.page-marquee:hover .pm-track{ animation-play-state:paused; }
+.pm-img{ display:block; height:580px; width:auto; flex:none;
+  border-radius:var(--radius-md); border:1px solid var(--border);
+  box-shadow:0 6px 18px hsla(147,30%,20%,.12); object-fit:contain; background:#fffdf8; }
+@keyframes pm-scroll-left { from{transform:translateX(0)}    to{transform:translateX(-50%)} }
+@keyframes pm-scroll-right{ from{transform:translateX(-50%)} to{transform:translateX(0)} }
+
+.mid-cta{ margin-top:48px; text-align:center;
+  background:linear-gradient(135deg,var(--gold-soft),var(--olive-soft));
+  border-radius:var(--radius-lg); padding:40px 30px; }
+.mid-cta p{ font-family:var(--font-serif); font-size:1.32rem; color:var(--text-dark); }
+.mid-cta p strong{ color:var(--primary); }
+.mid-cta .small{ font-size:.94rem; color:var(--text-muted); margin-bottom:22px; }
+
+/* ===================== 5. PERSONAS ===================== */
+.personas{ background:linear-gradient(180deg,var(--bg-marfim),var(--white)); }
+.grid-persona{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.persona-card{ background:#fff; border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:32px 26px; text-align:center;
+  transition:var(--transition); }
+.persona-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-medium); }
+.persona-card .ic{ width:64px; height:64px; margin:0 auto 18px; border-radius:50%;
+  display:grid; place-items:center; font-size:1.8rem; color:#fff;
+  background:linear-gradient(135deg,var(--primary-light),var(--primary-dark)); }
+.persona-card:nth-child(2) .ic{ background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+                                color:var(--primary-dark); }
+.persona-card:nth-child(3) .ic{ background:linear-gradient(135deg,var(--olive-light),var(--olive)); }
+.persona-card h3{ font-family:var(--font-display); font-weight:700; font-size:1.3rem;
+                  color:var(--text-dark); margin-bottom:10px; }
+.persona-card p{ font-family:var(--font-serif); font-size:1.08rem; line-height:1.5; }
+.persona-extra{ margin-top:26px; text-align:center; color:var(--olive); font-weight:600; }
+.persona-extra span{ color:var(--primary); }
+
+/* ===================== 6. BÔNUS ===================== */
+.bonus{ background:linear-gradient(160deg,var(--primary-dark),var(--primary)); color:#fff; }
+.bonus .section-head .eyebrow{ color:var(--gold-light); }
+.bonus .section-head h2{ color:#fff; }
+.bonus .section-head h2 .hl{ color:var(--gold-light); }
+.bonus .section-head p{ color:hsla(30,50%,92%,.8); }
+.grid-bonus{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; padding-top:56px; }
+.bonus-card{ background:#fff; border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:52px 26px 28px;
+  display:flex; flex-direction:column; box-shadow:var(--shadow-medium);
+  transition:var(--transition); }
+.bonus-card:hover{ transform:translateY(-8px); box-shadow:var(--shadow-large);
+                   border-color:var(--gold); }
+.bonus-card .cover{ aspect-ratio:16/10; margin:-38px 0 10px;
+  background:transparent; border:none; box-shadow:none; overflow:visible;
+  display:grid; place-items:center; }
+.bonus-card .cover img{ width:112%; max-width:none; height:auto; object-fit:contain;
+  filter:drop-shadow(0 18px 26px hsla(147,45%,12%,.32));
+  transition:transform .45s cubic-bezier(.2,.7,.3,1); }
+.bonus-card:hover .cover img{ transform:translateY(-6px) scale(1.04); }
+.bonus-card h3{ font-family:var(--font-serif); font-weight:700; font-size:1.4rem;
+                color:var(--primary); margin-bottom:8px; }
+.bonus-card p{ font-size:.96rem; line-height:1.5; flex:1; color:var(--text-body); }
+.bonus-price{ margin-top:18px; padding-top:16px; border-top:1px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between; }
+.bonus-price s{ color:var(--red); font-size:.95rem; font-weight:600; }
+.bonus-price .free{ font-family:var(--font-num); font-weight:800; font-size:.82rem;
+  color:#fff; background:linear-gradient(135deg,#12c74e,var(--buy-dark));
+  padding:5px 12px; border-radius:var(--radius-pill);
+  box-shadow:0 8px 20px hsla(145,90%,30%,.28); }
+
+.bonus-final{ margin-top:54px; max-width:640px; margin-inline:auto; text-align:center;
+  position:relative; isolation:isolate; border-radius:var(--radius-lg); padding:40px 34px 38px;
+  background:#fff; border:1px solid var(--border); box-shadow:var(--shadow-large);
+  overflow:hidden; }
+.bonus-final::after{ content:""; position:absolute; top:0; bottom:0; left:-60%;
+  width:45%; z-index:-1;
+  background:linear-gradient(100deg, transparent, hsla(145,60%,75%,.12), transparent);
+  transform:skewX(-18deg); animation:bonus-shine 5.5s ease-in-out infinite; }
+@keyframes bonus-shine{ 0%,60%{left:-60%} 100%{left:130%} }
+.bonus-final-badge{ display:inline-flex; align-items:center; gap:.5em;
+  font-family:var(--font-num); font-weight:800; font-size:.78rem;
+  text-transform:uppercase; color:#fff;
+  background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));
+  padding:7px 16px; border-radius:var(--radius-pill); margin-bottom:18px;
+  box-shadow:var(--shadow-medium); animation:badge-bob 2.6s ease-in-out infinite; }
+@keyframes badge-bob{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+.bonus-sum{ font-family:var(--font-serif); font-size:1.4rem;
+            color:var(--text-dark); margin:0 0 26px; }
+.bonus-sum .was{ color:var(--red); font-weight:600; text-decoration-thickness:2px; }
+.bonus-sum strong{ color:var(--buy-dark); font-weight:700; }
+.bonus-final-note{ display:block; margin-top:16px; font-size:.86rem; color:var(--text-muted); }
+
+/* ===================== 7. DEPOIMENTOS ===================== */
+.testi{ background:var(--white); }
+.grid-testi{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.testi-card{ background:var(--bg-marfim); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:34px 28px; transition:var(--transition);
+  display:flex; flex-direction:column; align-items:center; text-align:center; }
+.testi-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-medium); }
+.testi-head{ display:flex; flex-direction:column; align-items:center; gap:4px; margin-bottom:16px; }
+.testi-head .avatar{ width:82px; height:82px; border-radius:50%; object-fit:cover;
+  border:3px solid #fff; box-shadow:0 4px 14px hsla(147,30%,25%,.16); margin-bottom:12px; }
+.testi-head .name{ font-family:var(--font-num); font-weight:700; color:var(--text-dark); }
+.testi-head .meta{ font-size:.85rem; color:var(--text-muted); }
+.testi-head .verified{ color:var(--success); font-weight:700; }
+.testi-card .stars{ color:#f2a800; letter-spacing:2px; margin:6px 0 16px; }
+.testi-card .quote{ font-family:var(--font-serif); font-size:1.08rem; line-height:1.55; }
+.testi-card .quote strong{ color:var(--text-dark); font-weight:700;
+  text-decoration:underline; text-decoration-color:hsla(30,55%,50%,.55);
+  text-decoration-thickness:2px; text-underline-offset:3px;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+
+/* ===================== 8. OFERTA ===================== */
+.offer{ background:linear-gradient(160deg,hsl(147,45%,24%),hsl(150,58%,11%)); }
+.offer .section-head .eyebrow{ color:var(--gold-light); }
+.offer .section-head h2{ color:#fff; }
+.offer .section-head h2 .hl{ color:var(--gold-light); }
+.offer .section-head p{ color:hsla(30,50%,92%,.8); }
+.offer-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:26px; align-items:stretch; }
+.plan{ background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg);
+  padding:34px 30px; display:flex; flex-direction:column; box-shadow:var(--shadow-subtle); }
+.plan h3{ font-family:var(--font-display); font-weight:700; font-size:1.44rem;
+  color:var(--text-dark); margin-bottom:4px; }
+.plan .psub{ font-size:.94rem; color:var(--text-muted); margin-bottom:18px; }
+.plan.basic{ background:hsla(0,0%,100%,.07); border-color:hsla(30,60%,80%,.18);
+  box-shadow:none; backdrop-filter:blur(2px); }
+.plan.basic h3, .plan.basic .price{ color:#fff; }
+.plan.basic .psub{ color:hsla(30,50%,90%,.75); }
+.plan.basic li{ color:hsla(30,50%,94%,.9); }
+.plan.basic li.no{ color:hsla(30,40%,90%,.5); }
+.plan.basic .btn-ghost{ color:#fff; border-color:hsla(30,60%,85%,.35); }
+.plan.vip{ border:2px solid var(--gold); box-shadow:var(--shadow-large);
+  position:relative; background:#fff; padding-top:46px; text-align:center; }
+.plan.vip .ribbon{ position:absolute; top:0; left:50%; transform:translate(-50%,-50%);
+  display:inline-flex; align-items:center; gap:.4em; white-space:nowrap;
+  background:linear-gradient(90deg,var(--gold),var(--gold-dark)); color:var(--primary-dark);
+  font-family:var(--font-num); font-weight:800; font-size:.74rem; letter-spacing:.08em;
+  text-transform:uppercase; padding:9px 22px; border-radius:var(--radius-pill);
+  box-shadow:var(--shadow-medium); }
+.plan.vip .plan-mockup{ display:block; width:100%; max-width:420px; margin:6px auto 20px; }
+.plan.vip .price-row{ display:flex; flex-direction:column; align-items:center; gap:2px; }
+.plan.vip .anchor{ color:var(--text-muted); font-size:1.05rem; }
+.plan.vip .price{ color:var(--primary); font-size:3rem; }
+.plan.vip .installment{ font-family:var(--font-num); font-weight:600; color:var(--olive);
+  font-size:.98rem; margin-top:6px; }
+.plan.vip ul{ text-align:left; }
+.plan.vip li .ic{ background:var(--gold-soft); color:var(--gold-dark); }
+.plan .price{ font-family:var(--font-num); font-weight:800; font-size:2.4rem;
+              line-height:1; margin-bottom:4px; }
+.plan ul{ list-style:none; display:flex; flex-direction:column; gap:12px; margin:22px 0; flex:1; }
+.plan li{ display:flex; gap:11px; align-items:flex-start; font-size:.98rem; }
+.plan li .ic{ flex:none; width:22px; height:22px; border-radius:50%;
+              display:grid; place-items:center; font-size:.78rem; font-weight:800; }
+.plan li.yes .ic{ background:var(--olive-soft); color:var(--olive); }
+.plan li.no{ color:var(--text-muted); }
+.plan li.no .ic{ background:hsl(147,20%,93%); color:var(--text-muted); }
+.offer-secure{ margin-top:16px; text-align:center; font-size:.85rem; color:var(--text-muted);
+  display:flex; justify-content:center; gap:8px; flex-wrap:wrap; }
+
+/* ===================== 9. GARANTIA ===================== */
+.guarantee{ background:var(--white); }
+.guarantee-box{ max-width:720px; margin:0 auto; text-align:center;
+  background:linear-gradient(160deg,var(--olive-soft),var(--gold-soft));
+  border:1px solid var(--border); border-radius:var(--radius-lg); padding:48px 40px; }
+.seal-days-img{ width:250px; height:250px; max-width:80%; margin:0 auto 24px;
+  display:block; object-fit:contain; filter:drop-shadow(var(--shadow-medium)); }
+.guarantee-box h2{ font-family:var(--font-display); font-size:1.7rem;
+                   color:var(--text-dark); margin-bottom:14px; }
+.guarantee-box p strong{ color:var(--primary); }
+
+/* ===================== 10. FAQ ===================== */
+.faq{ background:linear-gradient(180deg,var(--bg-marfim),var(--white)); }
+.faq-list{ max-width:720px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+.faq-item{ background:#fff; border:1px solid var(--border);
+  border-radius:var(--radius-md); overflow:hidden; transition:var(--transition); }
+.faq-item[open]{ box-shadow:var(--shadow-subtle); border-color:var(--gold); }
+.faq-item summary{ list-style:none; cursor:pointer; padding:22px 26px;
+  font-family:var(--font-num); font-weight:700; color:var(--text-dark);
+  display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary .plus{ flex:none; color:var(--primary); font-size:1.5rem;
+                         transition:transform .3s; line-height:1; }
+.faq-item[open] summary .plus{ transform:rotate(45deg); }
+.faq-item .answer{ padding:0 26px 24px; line-height:1.6; }
+
+/* ===================== 11. CTA FINAL + 12. FOOTER ===================== */
+.final{
+  background:
+    radial-gradient(900px 460px at 50% -6%, hsl(147,52%,40%), transparent 62%),
+    linear-gradient(160deg,hsl(147,64%,20%),hsl(147,68%,14%));
+  color:#fff; text-align:center;
+}
+.final .eyebrow{ color:var(--gold-light); font-family:var(--font-num); font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase; font-size:.75rem; }
+.final h2{ font-family:var(--font-display); font-weight:800;
+  font-size:clamp(1.9rem,5vw,3rem); margin:16px auto 18px; max-width:640px; }
+.final h2 .hl{ color:var(--gold-light); font-style:italic; }
+.final p.urg{ display:inline-flex; align-items:center; gap:9px;
+  background:hsla(0,0%,100%,.1); border:1px solid hsla(30,60%,70%,.3);
+  color:var(--gold-light); border-radius:var(--radius-pill);
+  padding:10px 22px; font-weight:600; margin-bottom:30px; }
+
+footer{ background:hsl(147,30%,10%); color:hsla(30,40%,85%,.7);
+        padding:52px 0 40px; text-align:center; }
+footer .brand{ font-family:var(--font-display); font-weight:700;
+               color:var(--gold-light); font-size:1.24rem; margin-bottom:10px; }
+footer .verse{ font-family:var(--font-serif); font-style:italic;
+  color:hsla(30,40%,85%,.85); margin-bottom:22px; max-width:520px; margin-inline:auto; }
+footer .disclaimer{ font-size:.8rem; line-height:1.6; max-width:680px;
+                    margin:22px auto 0; color:hsla(30,30%,80%,.5); }
+footer .copy{ font-size:.82rem; margin-top:18px; }
+
+/* ===================== MODAL DOWNSELL ===================== */
+.downsell-overlay{ position:fixed; inset:0; background:hsla(147,40%,10%,.72);
+  backdrop-filter:blur(4px); display:none; align-items:center; justify-content:center;
+  padding:20px; z-index:120; }
+.downsell-overlay.open{ display:flex; }
+.downsell-modal{ background:var(--bg-marfim); border-radius:var(--radius-lg);
+  max-width:460px; width:100%; padding:38px 32px; text-align:center;
+  box-shadow:var(--shadow-large); position:relative; border:2px solid var(--gold);
+  animation:pop .35s cubic-bezier(.2,.8,.3,1.2); }
+@keyframes pop{ from{transform:scale(.9); opacity:0} to{transform:scale(1); opacity:1} }
+.downsell-modal .close{ position:absolute; top:14px; right:16px; background:none;
+  border:none; font-size:1.5rem; color:var(--text-muted); cursor:pointer; }
+.downsell-modal .dtag{ font-family:var(--font-num); font-weight:800; font-size:.74rem;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--gold-dark); margin-bottom:10px; }
+.downsell-modal h3{ font-family:var(--font-display); font-weight:700; font-size:1.5rem;
+                    color:var(--primary); margin-bottom:12px; }
+.downsell-modal .dprice{ font-family:var(--font-num); font-weight:800; font-size:2.2rem;
+                         color:var(--olive); margin:14px 0 22px; }
+.downsell-modal .dprice s{ font-size:1.1rem; color:var(--text-muted); margin-right:8px; }
+.downsell-modal .refuse{ display:block; margin-top:16px; font-size:.86rem;
+  color:var(--text-muted); text-decoration:underline; }
+
+/* ===================== REVEAL ===================== */
+.reveal{ opacity:0; transform:translateY(28px);
+  transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
+.reveal.in{ opacity:1; transform:none; }
+.delay-1{ transition-delay:.12s; }
+.delay-2{ transition-delay:.24s; }
+.delay-3{ transition-delay:.36s; }
+
+/* ===================== BREAKPOINTS ===================== */
+@media (max-width:900px){
+  .offer-grid{ grid-template-columns:1fr; }
+  .flip-embed .fp-iframe{ height:520px; }
+  .pm-img{ height:460px; }
+}
+@media (max-width:860px){
+  .hero-mockup{ transform:none; }
+}
+@media (max-width:768px){
+  section{ padding:64px 0; }
+  .grid-desire,.grid-persona,.grid-bonus,.grid-testi{ grid-template-columns:1fr; }
+  .grid-bonus{ row-gap:68px; }
+  .compare-grid{ grid-template-columns:1fr; }
+  .desire-card--wide{ grid-column:span 1; display:block; }
+  .desire-card--wide .card-img{
+    width:calc(100% + 52px); flex:none; margin:-30px -26px 22px;
+    aspect-ratio:1 / 1.414; height:auto; object-position:center top;
+    -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent);
+            mask-image:linear-gradient(180deg,#000 78%,transparent);
+    border-right:none; border-bottom:1px solid var(--border);
+  }
+  .hero-trust{ flex-wrap:wrap; }
+  .desire-strip{ padding:34px 26px; }
+}
+@media (max-width:560px){
+  .flip-embed .fp-iframe{ height:440px; }
+  .pm-img{ height:340px; }
+  .hero-cta .btn, .btn-lg{ width:100%; }
+  .hero h1 .l1{ white-space:normal; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; scroll-behavior:auto; }
+  .reveal{ opacity:1; transform:none; transition:none; }
+  .pm-row{ overflow-x:auto; }
+  .desire-strip::before,.desire-strip::after{ background-position:center; }
+  .desire-strip .ds-underline::after{ transform:scaleX(1); }
+}
+</style>
+
+<!-- ===================== 0. TOPBAR ===================== -->
+<div class="topbar">
+  <div class="topbar-track" id="topbarTrack">
+    <div class="topbar-seq">
+      <span class="tb-item">🪡 Guia Visual de Socorro</span><span class="tb-star">✦</span>
+      <span class="tb-item">🔎 80 Problemas Explicados</span><span class="tb-star">✦</span>
+      <span class="tb-item">🧵 Feito Para Quem Costura</span><span class="tb-star">✦</span>
+      <span class="tb-item">✅ Linguagem Simples e Direta</span><span class="tb-star">✦</span>
+      <span class="tb-item">⚡ Acesso Imediato em PDF</span><span class="tb-star">✦</span>
+      <span class="tb-item">🛡️ Garantia de 15 Dias</span><span class="tb-star">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 1. HERO ===================== -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-stack">
+
+      <h1 class="reveal in">
+        <span class="l1">Sua máquina travou?</span>
+        <span class="hl-block">80 problemas</span>
+        <span class="l3">resolvidos com <span class="hl">passo a passo visual</span></span>
+      </h1>
+
+      <p class="sub reveal in delay-1">
+        O guia de consulta rápida que mostra <b>o que verificar primeiro</b> quando a linha embola,
+        o ponto falha ou a máquina para. E também <b>quando é hora de chamar um técnico</b>.
+      </p>
+
+      <div class="book-stage reveal in delay-1">
+        <div class="book-glow"></div>
+        <img src="assets/mockups/mockup-principal.png" class="hero-mockup"
+             alt="Guia 80 Problemas Mais Comuns em Máquinas de Costura em PDF, aberto no tablet, no livro e no celular"
+             fetchpriority="high" />
+      </div>
+
+      <div class="hero-trust reveal in delay-2">
+        <span>⚡ Acesso imediato</span>
+        <span>📱 100% digital</span>
+      </div>
+
+      <div class="hero-delivery reveal in delay-2">
+        Você recebe tudo na hora, direto no seu
+        <span class="nowrap"><img src="icon-wpp.webp" alt="WhatsApp" class="hero-delivery-ic" /><b>WhatsApp</b></span>
+        e no seu
+        <span class="nowrap"><img src="icon-email.webp" alt="E-mail" class="hero-delivery-ic" /><b>e-mail</b></span>
+      </div>
+
+      <div class="hero-cta reveal in delay-2">
+        <a href="#comprar" class="btn btn-buy btn-lg">Quero meu guia agora <span class="arrow">➔</span></a>
+      </div>
+
+      <div class="hero-social reveal in delay-3">
+        <div class="hero-social-avatars">
+          <img src="assets/depoimentos/mulher 1.jpg" loading="lazy" alt="" />
+          <img src="assets/depoimentos/mulher 2.jpg" loading="lazy" alt="" />
+          <img src="assets/depoimentos/mulher 3.jpg" loading="lazy" alt="" />
+          <img src="assets/depoimentos/mulher 4.jpg" loading="lazy" alt="" />
+          <img src="assets/depoimentos/mulher 5.jpg" loading="lazy" alt="" />
+        </div>
+        <span class="hero-social-label">Mais de 3.000 costureiras!</span>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ===================== 2. VITRINE DE DESEJO ===================== -->
+<section class="vitrine">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que você vai encontrar</span>
+      <h2>Cada problema com <span class="hl">a resposta do lado</span></h2>
+      <div class="rule"></div>
+      <p>Você abre no problema que está vivendo agora e já vê o que checar primeiro.</p>
+    </div>
+
+    <div class="grid-desire">
+
+      <div class="desire-card reveal">
+        <img class="card-img" src="assets/vitrine/item-1.png" loading="lazy"
+             alt="Página do guia sobre linha embolando por baixo do tecido" />
+        <div class="verse">Problema 01</div>
+        <h3>A linha embola por baixo</h3>
+        <p>Aquele ninho de linha que aparece do nada e para o seu trabalho.</p>
+        <span class="quote">“Achei que era a bobina. Era a linha mal passada.”</span>
+      </div>
+
+      <div class="desire-card reveal delay-1">
+        <img class="card-img" src="assets/vitrine/item-2.png" loading="lazy"
+             alt="Página do guia sobre linha arrebentando durante a costura" />
+        <div class="verse">Problema 02</div>
+        <h3>A linha arrebenta toda hora</h3>
+        <p>Você passa de novo, costura dois palmos e ela estoura outra vez.</p>
+        <span class="quote">“Descobri que era a tensão apertada demais.”</span>
+      </div>
+
+      <div class="desire-card reveal delay-2">
+        <img class="card-img" src="assets/vitrine/item-3.png" loading="lazy"
+             alt="Página do guia sobre máquina pulando pontos" />
+        <div class="verse">Problema 03</div>
+        <h3>A máquina pula pontos</h3>
+        <p>A costura sai falhada e a peça perde o acabamento na hora.</p>
+        <span class="quote">“Era a agulha errada para aquele tecido.”</span>
+      </div>
+
+      <div class="desire-card reveal">
+        <img class="card-img" src="assets/vitrine/item-4.png" loading="lazy"
+             alt="Página do guia sobre agulha quebrando na máquina de costura" />
+        <div class="verse">Problema 04</div>
+        <h3>A agulha quebra</h3>
+        <p>Susto na hora, tempo perdido e medo de ter danificado a máquina.</p>
+        <span class="quote">“Aprendi a checar a posição antes de costurar.”</span>
+      </div>
+
+      <div class="desire-card reveal delay-1">
+        <img class="card-img" src="assets/vitrine/item-5.png" loading="lazy"
+             alt="Página do guia sobre tecido que não avança na máquina" />
+        <div class="verse">Problema 05</div>
+        <h3>O tecido não avança</h3>
+        <p>Você pisa no pedal e a peça fica parada, amassando embaixo do calcador.</p>
+        <span class="quote">“Era o dente do impelente abaixado.”</span>
+      </div>
+
+      <div class="desire-card desire-card--wide reveal delay-2">
+        <img class="card-img" src="assets/vitrine/capa-produto.png" loading="lazy"
+             alt="Capa do guia 80 Problemas Mais Comuns em Máquinas de Costura" />
+        <div>
+          <div class="verse">Todos os 80</div>
+          <h3>Do primeiro susto ao ajuste final</h3>
+          <p>São <strong>80 problemas</strong> reunidos em um só lugar: linha, tensão, agulha,
+          bobina, calcador, regulagem, sujeira, ruídos e travamentos.</p>
+          <span class="quote">“Parei de caçar vídeo solto. Abro o guia e resolvo.”</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="desire-strip reveal">
+      <span class="ds-icon">✦ ✦ ✦</span>
+      <p class="ds-text">
+        <strong>80 problemas.</strong> 80 explicações. 80 caminhos claros para
+        <span class="ds-underline">você voltar a costurar</span>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. COMPARATIVO ===================== -->
+<section class="compare">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">A diferença na prática</span>
+      <h2>Adivinhar sozinha é uma coisa.<br>Ter um guia do lado é outra.</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="compare-grid">
+
+      <div class="compare-col bad reveal">
+        <span class="tag">✕ Sem o guia</span>
+        <h3>Você testa no escuro</h3>
+        <p class="cap">O trabalho para e começa a caçada por respostas.</p>
+        <ul>
+          <li><span class="ic">✕</span> <span class="txt">Você não sabe por onde começar.</span></li>
+          <li><span class="ic">✕</span> <span class="txt">Assiste cinco vídeos e continua na dúvida.</span></li>
+          <li><span class="ic">✕</span> <span class="txt">Mexe na tensão sem saber se piorou.</span></li>
+          <li><span class="ic">✕</span> <span class="txt">Chama o técnico por uma regulagem simples.</span></li>
+          <li><span class="ic">✕</span> <span class="txt">Entrega atrasa e a cliente espera.</span></li>
+        </ul>
+      </div>
+
+      <div class="compare-col good reveal delay-1">
+        <span class="tag">✓ Com o guia</span>
+        <h3>Você segue uma sequência</h3>
+        <p class="cap">Abre no problema, confere a lista e testa de novo.</p>
+        <ul>
+          <li><span class="ic">✓</span> <span class="txt">Você abre no problema e vê <b>o que checar primeiro</b>.</span></li>
+          <li><span class="ic">✓</span> <span class="txt">Consulta um só material, com <b>imagem e passo a passo</b>.</span></li>
+          <li><span class="ic">✓</span> <span class="txt">Faz apenas os <b>ajustes simples e seguros</b>.</span></li>
+          <li><span class="ic">✓</span> <span class="txt">Sabe reconhecer <b>quando é caso de técnico</b>.</span></li>
+          <li><span class="ic">✓</span> <span class="txt">Resolve o que dá pra resolver e <b>segue produzindo</b>.</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. VEJA POR DENTRO ===================== -->
+<section class="inside">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Veja por dentro</span>
+      <h2>Folheie o guia <span class="hl">antes de decidir</span></h2>
+      <div class="rule"></div>
+      <p>Nada de promessa no escuro: veja as páginas reais que você vai receber.</p>
+    </div>
+
+    <div class="flip-wrap reveal">
+      <div class="flip-embed">
+        <iframe allowfullscreen allow="autoplay; fullscreen; clipboard-write"
+                scrolling="no" class="fp-iframe" loading="lazy"
+                title="Prévia real do guia 80 Problemas Mais Comuns em Máquinas de Costura"
+                src="https://heyzine.com/flip-book/0d83386156.html"></iframe>
+      </div>
+      <p class="flip-hint">Folheie as páginas reais do guia. Arraste ou use as setas. ✦</p>
+    </div>
+
+    <div class="page-marquee reveal">
+      <div class="pm-row">
+        <div class="pm-track pm-left">
+          <img class="pm-img" src="assets/inside/pagina-1.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-2.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-3.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-4.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-5.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-6.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-7.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-1.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-2.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-3.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-4.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-5.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-6.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-7.png" decoding="async" alt="" aria-hidden="true" />
+        </div>
+      </div>
+      <div class="pm-row">
+        <div class="pm-track pm-right">
+          <img class="pm-img" src="assets/inside/pagina-8.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-9.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-10.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-11.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-12.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-13.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-14.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-8.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-9.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-10.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-11.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-12.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-13.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-14.png" decoding="async" alt="" aria-hidden="true" />
+        </div>
+      </div>
+      <div class="pm-row">
+        <div class="pm-track pm-left pm-slow">
+          <img class="pm-img" src="assets/inside/pagina-15.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-16.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-17.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-18.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-19.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-20.png" decoding="async" alt="Página do guia 80 Problemas em Máquinas de Costura" />
+          <img class="pm-img" src="assets/inside/pagina-15.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-16.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-17.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-18.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-19.png" decoding="async" alt="" aria-hidden="true" />
+          <img class="pm-img" src="assets/inside/pagina-20.png" decoding="async" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mid-cta reveal">
+      <p><strong>80 problemas</strong> explicados com imagem, linguagem simples e passo a passo.</p>
+      <p class="small">Sem termo técnico, sem enrolação. Feito para quem costura.</p>
+      <a href="#comprar" class="btn btn-lg">Quero consultar sem depender de ninguém <span class="arrow">➔</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. PRA QUEM É ===================== -->
+<section class="personas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Pra quem é</span>
+      <h2>Feito para quem <span class="hl">depende da máquina</span></h2>
+      <div class="rule"></div>
+      <p>Não é curso de mecânica. É consulta rápida para o dia a dia de quem costura.</p>
+    </div>
+
+    <div class="grid-persona">
+      <div class="persona-card reveal">
+        <div class="ic">🧵</div>
+        <h3>A costureira profissional</h3>
+        <p>Você atende clientes e não pode parar a produção por causa de um ajuste simples.</p>
+      </div>
+      <div class="persona-card reveal delay-1">
+        <div class="ic">✂️</div>
+        <h3>Quem faz consertos e ajustes</h3>
+        <p>Você vive de prazo e precisa entender o problema antes de prometer entrega.</p>
+      </div>
+      <div class="persona-card reveal delay-2">
+        <div class="ic">🏠</div>
+        <h3>Quem costura em casa</h3>
+        <p>Você quer autonomia para cuidar da sua máquina sem depender de socorro toda vez.</p>
+      </div>
+    </div>
+
+    <p class="persona-extra reveal">E também para a <span>artesã que complementa a renda</span> e precisa que a máquina funcione todo dia. ✦</p>
+  </div>
+</section>
+
+<!-- ===================== 6. BÔNUS ===================== -->
+<section class="bonus">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Você não leva só o guia</span>
+      <h2>Você também recebe <span class="hl">3 bônus exclusivos</span></h2>
+      <div class="rule"></div>
+      <p>Materiais de apoio para cuidar da máquina antes do problema aparecer.</p>
+    </div>
+
+    <div class="grid-bonus">
+
+      <div class="bonus-card reveal">
+        <div class="cover">
+          <img src="assets/mockups/bonus-1.png" loading="lazy" alt="Bônus: Guia Visual - 30 Erros que Fazem a Máquina Parecer Quebrada (mockup)" />
+        </div>
+        <h3>Guia Visual: 30 Erros que Fazem a Máquina Parecer Quebrada</h3>
+        <p>Os enganos mais comuns que parecem defeito grave, mas têm solução simples.</p>
+        <div class="bonus-price">
+          <s>R$ 47</s>
+          <span class="free">VAI SAIR DE GRAÇA</span>
+        </div>
+      </div>
+
+      <div class="bonus-card reveal delay-1">
+        <div class="cover">
+          <img src="assets/mockups/bonus-2.png" loading="lazy" alt="Bônus: Guia Visual de Máquinas Usadas - O Que Verificar Antes de Comprar (mockup)" />
+        </div>
+        <h3>Guia Visual de Máquinas Usadas: O Que Verificar Antes de Comprar</h3>
+        <p>Os pontos essenciais para não levar dor de cabeça na hora de comprar uma máquina usada.</p>
+        <div class="bonus-price">
+          <s>R$ 37</s>
+          <span class="free">VAI SAIR DE GRAÇA</span>
+        </div>
+      </div>
+
+      <div class="bonus-card reveal delay-2">
+        <div class="cover">
+          <img src="assets/mockups/bonus-3.png" loading="lazy" alt="Bônus: Manual Visual de Limpeza Segura por Tipo de Máquina (mockup)" />
+        </div>
+        <h3>Manual Visual de Limpeza Segura por Tipo de Máquina</h3>
+        <p>Como limpar cada tipo de máquina sem danificar peças ou perder a garantia.</p>
+        <div class="bonus-price">
+          <s>R$ 57</s>
+          <span class="free">VAI SAIR DE GRAÇA</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bonus-final reveal">
+      <span class="bonus-final-badge">🎁 Os 3 bônus juntos</span>
+      <p class="bonus-sum">
+        Só em bônus são <s class="was">R$ 141</s>, que hoje entram
+        <strong>totalmente de graça</strong> pra você.
+      </p>
+      <a href="#comprar" class="btn btn-buy btn-lg">Quero o guia com os 3 bônus <span class="arrow">➔</span></a>
+      <span class="bonus-final-note">✦ Oferta válida enquanto os bônus estiverem disponíveis</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. DEPOIMENTOS ===================== -->
+<section class="testi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Quem já está usando</span>
+      <h2>Costureiras que <span class="hl">pararam de adivinhar</span></h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="grid-testi">
+
+      <div class="testi-card reveal">
+        <div class="testi-head">
+          <img class="avatar" src="assets/depoimentos/mulher 6.jpg" loading="lazy" alt="Foto de Rosângela M." />
+          <span class="name">Rosângela M.</span>
+          <span class="meta"><span class="verified">✔ Verificado</span> · Contagem/MG</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="quote">A linha embolava e eu já ia ligar pro técnico. Abri no problema, conferi a lista e
+        <strong>era só a passagem da linha</strong>. Voltei a costurar no mesmo dia.</p>
+      </div>
+
+      <div class="testi-card reveal delay-1">
+        <div class="testi-head">
+          <img class="avatar" src="assets/depoimentos/mulher 2.jpg" loading="lazy" alt="Foto de Cleide A." />
+          <span class="name">Cleide A.</span>
+          <span class="meta"><span class="verified">✔ Verificado</span> · Sorocaba/SP</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="quote">Antes eu ficava horas no YouTube. Agora <strong>consulto num lugar só</strong> e já
+        sei o que checar primeiro. Ganhei tempo e parei de mexer no que não devia.</p>
+      </div>
+
+      <div class="testi-card reveal delay-2">
+        <div class="testi-head">
+          <img class="avatar" src="assets/depoimentos/mulher 4.jpg" loading="lazy" alt="Foto de Marlene S." />
+          <span class="name">Marlene S.</span>
+          <span class="meta"><span class="verified">✔ Verificado</span> · Fortaleza/CE</span>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="quote">Tenho um ateliê pequeno e trabalho com prazo. O guia me ajudou a
+        <strong>entender quando é caso de técnico</strong> e quando é ajuste que eu mesma faço.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8. OFERTA ===================== -->
+<section class="offer" id="comprar">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Escolha seu acesso</span>
+      <h2>Comece hoje a <span class="hl">entender sua máquina</span></h2>
+      <div class="rule"></div>
+      <p>Pagamento único. Acesso imediato. Sem mensalidade.</p>
+    </div>
+
+    <div class="offer-grid">
+
+      <!-- BLOCO 1 — PLANO BÁSICO (decoy) -->
+      <div class="plan basic reveal">
+        <h3>Só o Guia</h3>
+        <p class="psub">O guia dos 80 problemas, sem os bônus.</p>
+        <div class="price">R$ 22,90</div>
+        <ul>
+          <li class="yes"><span class="ic">✓</span> <span class="txt">Guia com os 80 problemas</span></li>
+          <li class="yes"><span class="ic">✓</span> <span class="txt">Acesso imediato em PDF</span></li>
+          <li class="no"><span class="ic">✕</span> <span class="txt">Guia Visual - 30 Erros que Fazem a Máquina Parecer Quebrada</span></li>
+          <li class="no"><span class="ic">✕</span> <span class="txt">Guia Visual de Máquinas Usadas</span></li>
+          <li class="no"><span class="ic">✕</span> <span class="txt">Manual Visual de Limpeza Segura</span></li>
+        </ul>
+        <button class="btn btn-ghost btn-block" id="abrirDownsell">Quero só o básico</button>
+      </div>
+
+      <!-- BLOCO 2 — PLANO COMPLETO (VIP) -->
+      <div class="plan vip reveal delay-1">
+        <span class="ribbon">⭐ O Mais Escolhido</span>
+
+        <h3>Guia Completo + 3 Bônus</h3>
+        <p class="psub">Tudo o que você precisa para não parar de costurar.</p>
+
+        <img class="plan-mockup" src="assets/mockups/plano-completo.png" loading="lazy"
+             alt="Pacote completo: guia dos 80 problemas mais os 3 bônus" />
+
+        <div class="price-row">
+          <span class="anchor">De <s>R$ 141</s> por apenas</span>
+          <span class="price">R$ 29,90</span>
+        </div>
+        <div class="installment">ou 12x de R$ 3,01 · pagamento único</div>
+
+        <ul>
+          <li class="yes"><span class="ic">✓</span> <span class="txt">Guia completo com os <strong>80 problemas</strong></span></li>
+          <li class="yes"><span class="ic">✓</span> <span class="txt">Passo a passo visual do que checar primeiro</span></li>
+          <li class="yes"><span class="ic">✓</span> <span class="txt"><strong>Bônus:</strong> Guia Visual - 30 Erros que Fazem a Máquina Parecer Quebrada</span></li>
+          <li class="yes"><span class="ic">✓</span> <span class="txt"><strong>Bônus:</strong> Guia Visual de Máquinas Usadas</span></li>
+          <li class="yes"><span class="ic">✓</span> <span class="txt"><strong>Bônus:</strong> Manual Visual de Limpeza Segura</span></li>
+          <li class="yes"><span class="ic">✓</span> <span class="txt">Acesso imediato e vitalício</span></li>
+        </ul>
+
+        <a href="#" class="btn btn-buy btn-lg btn-block" data-checkout="vip">
+          Quero o guia completo <span class="arrow">➔</span>
+        </a>
+
+        <div class="offer-secure">
+          <span>🔒 Compra 100% segura</span> <span>•</span>
+          <span>🛡️ Garantia de 15 dias</span> <span>•</span>
+          <span>⚡ Acesso imediato</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9. GARANTIA ===================== -->
+<section class="guarantee">
+  <div class="container">
+    <div class="guarantee-box reveal">
+      <img class="seal-days-img" src="assets/garantia-15-dias.webp"
+           alt="Selo de garantia de 15 dias" loading="lazy" />
+      <h2>O risco é todo meu</h2>
+      <p>Você pode adquirir hoje, folhear com calma e consultar na primeira vez que a máquina
+      der problema. Se em <strong>15 dias</strong> você achar que não era pra você, é só me
+      avisar: eu devolvo todo o seu dinheiro, sem perguntas, sem complicação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10. FAQ ===================== -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Ainda ficou <span class="hl">alguma dúvida?</span></h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Como eu recebo o material? <span class="plus">+</span></summary>
+        <div class="answer">Assim que o pagamento é confirmado, o acesso chega na hora no seu WhatsApp e no seu e-mail. É tudo digital, em PDF. Você abre no celular, no computador ou imprime se preferir.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso entender de mecânica? <span class="plus">+</span></summary>
+        <div class="answer">Não. O guia foi escrito para quem costura, não para técnicos. A linguagem é simples e cada problema vem com imagem e passo a passo do que verificar primeiro.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Serve para a minha máquina? <span class="plus">+</span></summary>
+        <div class="answer">O guia trata dos problemas mais comuns em máquinas de costura domésticas e semi-industriais. Os pontos de verificação (linha, tensão, agulha, bobina, calcador e limpeza) são comuns à maioria dos modelos.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Vou conseguir consertar qualquer defeito? <span class="plus">+</span></summary>
+        <div class="answer">Não, e o guia é honesto sobre isso. Muitos problemas do dia a dia começam por verificações simples que você mesma pode fazer. Para o que exige assistência técnica, o guia mostra como reconhecer e orienta você a procurar um técnico.</div>
+      </details>
+      <details class="faq-item">
+        <summary>E se eu não gostar? <span class="plus">+</span></summary>
+        <div class="answer">Você tem 15 dias de garantia. Se achar que o material não é pra você, basta me avisar e eu devolvo todo o valor, sem perguntas.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 11. CTA FINAL ===================== -->
+<section class="final">
+  <div class="container narrow">
+    <span class="eyebrow">Última chamada</span>
+    <h2>Da próxima vez que a máquina parar, <span class="hl">você vai saber o que fazer</span></h2>
+    <p class="urg">⏳ Os 3 bônus saem junto só enquanto esta oferta estiver no ar</p>
+    <div>
+      <a href="#comprar" class="btn btn-gold btn-lg">Quero meu guia agora <span class="arrow">➔</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 12. FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="brand">80 Problemas Mais Comuns em Máquinas de Costura</div>
+    <p class="verse">“Quem entende a própria máquina não para o trabalho por qualquer coisa.”</p>
+    <p class="copy">© 2026 80 Problemas Mais Comuns em Máquinas de Costura. Todos os direitos reservados.</p>
+    <p class="disclaimer">
+      Este é um material informativo e educativo de consulta, destinado a quem utiliza máquinas de
+      costura. Não substitui a avaliação de um técnico ou de uma assistência autorizada, e não
+      garante a solução de todo e qualquer defeito. Os relatos apresentados são pessoais e não
+      representam promessa de resultado. Ajustes devem ser feitos com a máquina desligada e com
+      atenção às orientações do fabricante. Este site não tem qualquer vínculo com o Facebook,
+      o Instagram ou o Google.
+    </p>
+  </div>
+</footer>
+
+<!-- ===================== MODAL DOWNSELL ===================== -->
+<div class="downsell-overlay" id="downsellOverlay" role="dialog" aria-modal="true" aria-label="Oferta especial">
+  <div class="downsell-modal">
+    <button class="close" id="fecharDownsell" aria-label="Fechar">×</button>
+    <div class="dtag">Espere! Uma oferta só pra você</div>
+    <h3>Leve o pacote completo por menos</h3>
+    <p>Antes de seguir só com o básico… que tal levar <strong>o guia completo mais os 3 bônus</strong> por um valor especial?</p>
+    <div class="dprice"><s>R$ 29,90</s> R$ 25,90</div>
+    <a href="#" class="btn btn-buy btn-block" data-checkout="downsell">
+      Sim, quero o pacote completo <span class="arrow">➔</span>
+    </a>
+    <a href="#" class="refuse" id="recusarDownsell" data-checkout="basico">Não, prefiro só o guia por R$ 22,90</a>
+  </div>
+</div>
+
+<script>
+/* 1. SCROLL-REVEAL */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+  if(!('IntersectionObserver' in window)){
+    for(var k=0;k<els.length;k++) els[k].classList.add('in');
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold:.14, rootMargin:'0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+/* 2. MODAL DOWNSELL */
+(function(){
+  var open    = document.getElementById('abrirDownsell');
+  var overlay = document.getElementById('downsellOverlay');
+  var close   = document.getElementById('fecharDownsell');
+  if(!open || !overlay) return;
+  function show(e){ if(e) e.preventDefault(); overlay.classList.add('open');
+                    document.body.style.overflow='hidden'; }
+  function hide(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+  open.addEventListener('click', show);
+  if(close) close.addEventListener('click', hide);
+  overlay.addEventListener('click', function(e){ if(e.target===overlay) hide(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') hide(); });
+})();
+
+/* 3. CHECKOUT — LINKS REAIS + REPASSE DE UTMs ATÉ O CHECKOUT */
+(function(){
+  var LINKS = {
+    vip:      'https://pay.wiapy.com/6a67d2613d15a61538f3484c',  // Oferta principal — R$ 29,90
+    downsell: 'https://pay.wiapy.com/xzFG3OQ7XnSd',              // Pacote completo com desconto — R$ 25,90
+    basico:   'https://pay.wiapy.com/xY57Lza7mg2'                // Plano básico — R$ 22,90
+  };
+
+  // Anexa a query string atual da página (UTMs, gclid, fbclid, etc.) ao link de checkout,
+  // sem sobrescrever parâmetros que o próprio link já traga.
+  function withParams(baseUrl){
+    var incoming = window.location.search;                 // ex.: "?utm_source=fb&utm_campaign=x"
+    if(!incoming || incoming === '?') return baseUrl;
+    try{
+      var url = new URL(baseUrl);
+      var current = new URLSearchParams(incoming);
+      current.forEach(function(value, key){
+        if(!url.searchParams.has(key)) url.searchParams.set(key, value);
+      });
+      return url.toString();
+    }catch(e){
+      // Fallback p/ navegadores sem URL/URLSearchParams: concatenação manual
+      var qs = incoming.charAt(0) === '?' ? incoming.slice(1) : incoming;
+      return baseUrl + (baseUrl.indexOf('?') === -1 ? '?' : '&') + qs;
+    }
+  }
+
+  var btns = document.querySelectorAll('[data-checkout]');
+  if(!btns.length) return;
+  btns.forEach(function(b){
+    var key = b.getAttribute('data-checkout');
+    if(LINKS[key]) b.setAttribute('href', withParams(LINKS[key]));
+  });
+})();
+
+/* 4. TOPBAR MARQUEE */
+(function(){
+  var track = document.getElementById('topbarTrack');
+  if(!track) return;
+  var seq = track.querySelector('.topbar-seq');
+  if(!seq) return;
+  track.appendChild(seq.cloneNode(true));
+})();
+
+/* 5. SCROLL-DRIVEN — faixa de diferencial */
+(function(){
+  var strip = document.querySelector('.desire-strip');
+  if(!strip) return;
+  var ticking = false;
+  function update(){
+    var r  = strip.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    var mid = r.top + r.height/2;
+    var start = vh * 0.85, end = vh * 0.5;
+    var p = (start - mid) / (start - end);
+    p = Math.max(0, Math.min(1, p));
+    strip.style.setProperty('--scroll', p.toFixed(4));
+    ticking = false;
+  }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  window.addEventListener('resize', onScroll, { passive:true });
+  update();
+})();
+</script>
